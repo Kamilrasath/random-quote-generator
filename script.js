@@ -10,7 +10,7 @@ function randomQuote(){
     quoteBtn.classList.add("loading");
     quoteBtn.innerText = "Loading Quote...";
     fetch('https://dummyjson.com/quotes/random').then(response => response.json()).then(result => {
-        quoteText.innerText = result.content;
+        quoteText.innerText = result.quote;
         authorName.innerText = result.author;
         quoteBtn.classList.remove("loading");
         quoteBtn.innerText = "New Quote";
